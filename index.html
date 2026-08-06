@@ -1,84 +1,295 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raffi Akbar Aprillian | Portfolio</title>
+<meta name="description" content="Portfolio pribadi Raffi Akbar Aprillian - Frontend Developer & UI Designer">
+
+<!-- Google Font: Poppins -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <nav>
-        <h2 class="logo">RAFFI</h2>
+<!-- ============ NAVIGATION ============ -->
+<header class="navbar" id="navbar">
+  <nav class="nav-container">
+    <a href="#home" class="logo">Raffi<span>.</span></a>
 
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skill">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+      <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+      <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+      <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+      <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+    </ul>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
 </header>
 
-<section id="home" class="hero">
+<!-- ============ HERO SECTION ============ -->
+<section class="hero" id="home">
+  <div class="hero-container">
     <div class="hero-text">
-        <h1>Halo, Saya <span>Raffi Akbar Aprillian</span></h1>
-        <p>UI Design, DKV, </p>
-
-        <button id="btnHello">Klik Saya</button>
+      <p class="hero-greeting fade-in">Hello, I'm</p>
+      <h1 class="hero-name fade-in">RAFFI AKBAR<br>APRILLIAN</h1>
+      <h2 class="hero-subtitle fade-in">
+        <span id="typedText"></span><span class="cursor">|</span>
+      </h2>
+      <p class="hero-desc fade-in">
+        Pelajar SMK yang antusias dalam membangun website modern dan
+        merancang antarmuka pengguna yang bersih, fungsional, dan menarik secara visual.
+      </p>
+      <div class="hero-buttons fade-in">
+        <a href="#projects" class="btn btn-primary">Explore Projects</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
     </div>
 
-    <div class="hero-img">
-        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+    <div class="hero-image fade-in">
+      <div class="profile-glow">
+        <div class="profile-wrapper floating">
+          <img src="https://api.dicebear.com/7.x/initials/svg?seed=Raffi%20Akbar&backgroundColor=1e293b&textColor=38bdf8" alt="Raffi Akbar Aprillian" class="profile-img">
+        </div>
+      </div>
     </div>
+  </div>
+
+  <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+    <span></span>
+  </a>
 </section>
 
-<section id="about" class="about">
-    <h2>Tentang Saya</h2>
+<!-- ============ ABOUT SECTION ============ -->
+<section class="about" id="about">
+  <div class="section-container">
+    <p class="section-tag fade-in">Get To Know</p>
+    <h2 class="section-title fade-in">About Me</h2>
 
-    <p>
-        Saya adalah siswa SMK TELKOM SIDOARJO saya dari jurusan SIJA, saya sekarang duduk di kelas 11. Saya memiliki ketertarikan pada dunia UI Design dan teknologi. Saya senang belajar hal baru dan membuat project yang bermanfaat.
-    </p>
+    <div class="about-grid">
+      <div class="about-text fade-in">
+        <p>
+          Saya adalah seorang pelajar SMK dengan minat besar di bidang pengembangan web
+          dan desain antarmuka pengguna (UI). Saya senang mempelajari hal baru, mencoba
+          teknologi terkini, dan mengubah ide menjadi produk digital yang nyata.
+        </p>
+        <p>
+          Fokus saya adalah membangun website yang tidak hanya berfungsi dengan baik,
+          tetapi juga memiliki tampilan yang modern, rapi, dan nyaman digunakan.
+          Saya percaya bahwa detail kecil membuat perbedaan besar dalam sebuah karya.
+        </p>
+      </div>
+
+      <div class="about-cards">
+        <div class="about-card fade-in">
+          <div class="about-icon">🔥</div>
+          <h3>Passion</h3>
+          <p>Bersemangat dalam menciptakan karya digital yang bermanfaat.</p>
+        </div>
+        <div class="about-card fade-in">
+          <div class="about-icon">💼</div>
+          <h3>Experience</h3>
+          <p>Terlibat dalam berbagai proyek sekolah dan latihan mandiri.</p>
+        </div>
+        <div class="about-card fade-in">
+          <div class="about-icon">📚</div>
+          <h3>Learning</h3>
+          <p>Terus belajar teknologi dan praktik terbaik pengembangan web.</p>
+        </div>
+        <div class="about-card fade-in">
+          <div class="about-icon">🎨</div>
+          <h3>Creativity</h3>
+          <p>Menyukai eksplorasi desain UI yang unik dan estetik.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="skill" class="skill">
-    <h2>Skills</h2>
+<!-- ============ SKILLS SECTION ============ -->
+<section class="skills" id="skills">
+  <div class="section-container">
+    <p class="section-tag fade-in">My Abilities</p>
+    <h2 class="section-title fade-in">Skills</h2>
 
-    <div class="card-container">
-
-        <div class="card">
-            <h3>HTML</h3>
-            <p>Membuat struktur website.</p>
+    <div class="skills-grid fade-in">
+      <div class="skill-item">
+        <div class="skill-info">
+          <span class="skill-name">HTML</span>
+          <span class="skill-percent">90%</span>
         </div>
-
-        <div class="card">
-            <h3>CSS</h3>
-            <p>Mendesain tampilan website.</p>
+        <div class="progress-bar">
+          <div class="progress-fill" data-width="90"></div>
         </div>
+      </div>
 
-        <div class="card">
-            <h3>JavaScript</h3>
-            <p>Membuat website lebih interaktif.</p>
+      <div class="skill-item">
+        <div class="skill-info">
+          <span class="skill-name">CSS</span>
+          <span class="skill-percent">85%</span>
         </div>
+        <div class="progress-bar">
+          <div class="progress-fill" data-width="85"></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-info">
+          <span class="skill-name">JavaScript</span>
+          <span class="skill-percent">75%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" data-width="75"></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-info">
+          <span class="skill-name">PHP</span>
+          <span class="skill-percent">70%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" data-width="70"></div>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-info">
+          <span class="skill-name">MySQL</span>
+          <span class="skill-percent">65%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" data-width="65"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS SECTION ============ -->
+<section class="projects" id="projects">
+  <div class="section-container">
+    <p class="section-tag fade-in">My Work</p>
+    <h2 class="section-title fade-in">Projects</h2>
+
+    <div class="projects-grid">
+
+      <div class="project-card fade-in">
+        <div class="project-image">
+          <div class="image-placeholder">🍽️</div>
+        </div>
+        <div class="project-content">
+          <h3>Sistem Kantin</h3>
+          <p>Aplikasi manajemen kantin sekolah untuk mempermudah transaksi, pemesanan, dan pengelolaan menu secara digital.</p>
+          <div class="tech-badges">
+            <span class="badge">HTML</span>
+            <span class="badge">CSS</span>
+            <span class="badge">PHP</span>
+            <span class="badge">MySQL</span>
+          </div>
+          <div class="project-buttons">
+            <a href="#" class="btn-small btn-view">View Project</a>
+            <a href="#" class="btn-small btn-github">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-image">
+          <div class="image-placeholder">🅿️</div>
+        </div>
+        <div class="project-content">
+          <h3>ParkSmart</h3>
+          <p>Sistem parkir pintar berbasis web yang membantu memantau ketersediaan slot parkir secara real-time.</p>
+          <div class="tech-badges">
+            <span class="badge">HTML</span>
+            <span class="badge">CSS</span>
+            <span class="badge">JavaScript</span>
+          </div>
+          <div class="project-buttons">
+            <a href="#" class="btn-small btn-view">View Project</a>
+            <a href="#" class="btn-small btn-github">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-image">
+          <div class="image-placeholder">🍳</div>
+        </div>
+        <div class="project-content">
+          <h3>Resep Kitong</h3>
+          <p>Website kumpulan resep masakan lengkap dengan bahan, langkah pembuatan, dan fitur pencarian resep.</p>
+          <div class="tech-badges">
+            <span class="badge">HTML</span>
+            <span class="badge">CSS</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">PHP</span>
+          </div>
+          <div class="project-buttons">
+            <a href="#" class="btn-small btn-view">View Project</a>
+            <a href="#" class="btn-small btn-github">GitHub</a>
+          </div>
+        </div>
+      </div>
 
     </div>
+  </div>
 </section>
 
-<section id="contact" class="contact">
-    <h2>Contact</h2>
+<!-- ============ CONTACT SECTION ============ -->
+<section class="contact" id="contact">
+  <div class="section-container">
+    <p class="section-tag fade-in">Get In Touch</p>
+    <h2 class="section-title fade-in">Contact Me</h2>
 
-    <p>Email : raffikapril09@gmail.com</p>
-    <p>Instagram : @fyybar</p>
+    <div class="contact-grid">
+      <a href="mailto:raffi.akbar@example.com" class="contact-card fade-in">
+        <div class="contact-icon">📧</div>
+        <h3>Email</h3>
+        <p>raffi.akbar@example.com</p>
+      </a>
 
+      <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="contact-card fade-in">
+        <div class="contact-icon">💻</div>
+        <h3>GitHub</h3>
+        <p>github.com/raffiakbar</p>
+      </a>
+
+      <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="contact-card fade-in">
+        <div class="contact-icon">📸</div>
+        <h3>Instagram</h3>
+        <p>@raffi.akbar</p>
+      </a>
+    </div>
+  </div>
 </section>
 
-<footer>
-    <p>© 2026 My Profile | Made with ❤️</p>
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-container">
+    <p>&copy; <span id="year"></span> Raffi Akbar Aprillian. All rights reserved.</p>
+    <p class="footer-sub">Designed & Built with 💙</p>
+  </div>
 </footer>
 
-<script src="script.js"></script>
+<!-- ============ BACK TO TOP ============ -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="12" y1="19" x2="12" y2="5"></line>
+    <polyline points="5 12 12 5 19 12"></polyline>
+  </svg>
+</button>
 
+<script src="script.js"></script>
 </body>
 </html>
