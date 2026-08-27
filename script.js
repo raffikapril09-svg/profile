@@ -1,7 +1,3 @@
-/* ==========================================================================
-   PORTFOLIO SCRIPT.JS
-   Modular vanilla JavaScript — organized by feature
-   ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavbarScroll();
@@ -16,10 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
   setFooterYear();
 });
 
-/* ==========================================================================
-   1. NAVBAR SCROLL EFFECT
-   Adds blurred background once user scrolls down
-   ========================================================================== */
 function initNavbarScroll() {
   const navbar = document.getElementById('navbar');
 
@@ -35,9 +27,6 @@ function initNavbarScroll() {
   handleScroll(); // run on load
 }
 
-/* ==========================================================================
-   2. MOBILE MENU TOGGLE
-   ========================================================================== */
 function initMobileMenu() {
   const menuToggle = document.getElementById('menuToggle');
   const navLinks = document.getElementById('navLinks');
@@ -47,7 +36,6 @@ function initMobileMenu() {
     navLinks.classList.toggle('active');
   });
 
-  // Close menu when a link is clicked (mobile UX)
   navLinks.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
       menuToggle.classList.remove('active');
@@ -56,9 +44,6 @@ function initMobileMenu() {
   });
 }
 
-/* ==========================================================================
-   3. SMOOTH SCROLLING FOR NAV LINKS
-   ========================================================================== */
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -79,10 +64,6 @@ function initSmoothScroll() {
   });
 }
 
-/* ==========================================================================
-   4. ACTIVE NAVIGATION HIGHLIGHT
-   Highlights the nav link corresponding to the section in view
-   ========================================================================== */
 function initActiveNavHighlight() {
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
@@ -111,9 +92,6 @@ function initActiveNavHighlight() {
   sections.forEach(section => observer.observe(section));
 }
 
-/* ==========================================================================
-   5. TYPING EFFECT (Hero Subtitle)
-   ========================================================================== */
 function initTypingEffect() {
   const typedTextEl = document.getElementById('typedText');
   const phrases = ['Pelajar SMK', 'Frontend Developer', 'UI Designer'];
@@ -155,10 +133,6 @@ function initTypingEffect() {
   type();
 }
 
-/* ==========================================================================
-   6. SCROLL REVEAL ANIMATION
-   Adds 'visible' class to elements with .fade-in when they enter viewport
-   ========================================================================== */
 function initScrollReveal() {
   const fadeElements = document.querySelectorAll('.fade-in');
 
@@ -176,10 +150,6 @@ function initScrollReveal() {
   fadeElements.forEach(el => observer.observe(el));
 }
 
-/* ==========================================================================
-   7. ANIMATED SKILL PROGRESS BARS
-   Only animates once the skills section becomes visible
-   ========================================================================== */
 function initProgressBars() {
   const skillsSection = document.getElementById('skills');
   const progressBars = document.querySelectorAll('.progress-fill');
@@ -192,7 +162,6 @@ function initProgressBars() {
 
         progressBars.forEach(bar => {
           const targetWidth = bar.getAttribute('data-width');
-          // Small delay for a smoother staggered effect
           setTimeout(() => {
             bar.style.width = targetWidth + '%';
           }, 150);
@@ -206,9 +175,6 @@ function initProgressBars() {
   observer.observe(skillsSection);
 }
 
-/* ==========================================================================
-   8. BACK TO TOP BUTTON
-   ========================================================================== */
 function initBackToTop() {
   const backToTopBtn = document.getElementById('backToTop');
 
@@ -228,10 +194,6 @@ function initBackToTop() {
   });
 }
 
-/* ==========================================================================
-   9. BUTTON RIPPLE EFFECT
-   Applies a material-style ripple to .btn elements on click
-   ========================================================================== */
 function initRippleEffect() {
   const buttons = document.querySelectorAll('.btn');
 
@@ -254,10 +216,6 @@ function initRippleEffect() {
   });
 }
 
-/* ==========================================================================
-   10. FOOTER YEAR
-   ========================================================================== */
-function setFooterYear() {
   const yearEl = document.getElementById('year');
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
