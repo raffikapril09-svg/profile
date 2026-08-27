@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initActiveNavHighlight();
   initTypingEffect();
   initScrollReveal();
-  initProgressBars();
   initBackToTop();
   initRippleEffect();
   setFooterYear();
@@ -145,30 +144,6 @@ function initScrollReveal() {
   }, { threshold: 0.15 });
 
   fadeElements.forEach(el => observer.observe(el));
-}
-
-/* 7. ANIMATED SKILL PROGRESS BARS */
-function initProgressBars() {
-  const skillsSection = document.getElementById('skills');
-  const progressBars = document.querySelectorAll('.progress-fill');
-  let hasAnimated = false;
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !hasAnimated) {
-        hasAnimated = true;
-        progressBars.forEach(bar => {
-          const targetWidth = bar.getAttribute('data-width');
-          setTimeout(() => {
-            bar.style.width = targetWidth + '%';
-          }, 150);
-        });
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.3 });
-
-  observer.observe(skillsSection);
 }
 
 /* 8. BACK TO TOP BUTTON */
